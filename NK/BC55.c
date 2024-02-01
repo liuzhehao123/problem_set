@@ -24,7 +24,6 @@ int main()
         default:
         printf("Invalid operation!\n");
         break;
-
     }
 
     return 0;
