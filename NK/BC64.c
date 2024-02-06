@@ -18,6 +18,7 @@ int main()
         //下一半
         for (i = 1; i <= n; i++) 
         {
+            int j = 0;
             for (j = 0; j <= i; j++) 
             {
                  printf("* ");
