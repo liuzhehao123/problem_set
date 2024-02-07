@@ -6,10 +6,10 @@ int main()
     {
         //上一半
         int i = 0;
-       for (i = n+1; i>0; i--) 
+       for (i = n + 1; i > 0; i--) 
        {
             int j = 0;
-            for (j = i; j>0; j--) 
+            for (j = i; j > 0; j--) 
             {
                 printf("* ");
             }
