@@ -17,6 +17,7 @@ int read()
     {
         res = res * 10 + (op ^ 48);
     }
+    
     return res;
 }
 
@@ -62,6 +63,7 @@ void _splay(int x, int p)
             rotate(relation(x)^relation(f) ? x : f);
         }
     }
+
     if (!p)
     {
         root = x;
@@ -79,6 +81,7 @@ int _find(int rank)
         }
         else rank -= siz[ch[now][0]] + 1, now = ch[now][1];
     }
+
     return now;
 }
 
@@ -92,6 +95,7 @@ void ins(int& x, int f, int v)
         siz[x] = 1;
         return;
     }
+
     if (a[v] > a[maxn[ch[x][1]]] && a[v] > a[val[x]])
     {
         ins(ch[x][0], x, v);
@@ -106,7 +110,9 @@ void print(int x)
     {
         print(ch[x][0]);
     }
+
     printf("%d ", val[x]);
+
     if (ch[x][1])
     {
         print(ch[x][1]);
@@ -120,6 +126,7 @@ signed main(int argc, char** argv)
     {
         a[i] = read(), c[i] = read();
     }
+
     for (int i = 1; i <= n; ++i) 
     {
         if (i - c[i] > 1) 
@@ -130,6 +137,8 @@ signed main(int argc, char** argv)
         else ins(root, 0, i);
         _splay(len, 0);
     }
+
     print(root);
+
     return 0;
 }
