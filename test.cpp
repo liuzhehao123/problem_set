@@ -17,7 +17,6 @@ int read()
     {
         res = res * 10 + (op ^ 48);
     }
-    
     return res;
 }
 
