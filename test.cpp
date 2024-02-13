@@ -13,9 +13,11 @@ int read()
     static char op;
     do op = getchar();
     while (op > '9' || op < '0');
-    for (res = 0; op >= '0' && op <= '9'; op = getchar())
     {
-        res = res * 10 + (op ^ 48);
+        for (res = 0; op >= '0' && op <= '9'; op = getchar())
+        {
+            res = res * 10 + (op ^ 48);
+        }
     }
     return res;
 }
