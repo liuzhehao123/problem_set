@@ -1,5 +1,5 @@
-#include<algorithm>
-#include<cstdio>
+#include <algorithm>
+#include <cstdio>
 #define N 100010
 
 using namespace std;
@@ -7,11 +7,12 @@ using namespace std;
 int a[N], c[N], n;
 int val[N], siz[N], maxn[N], fa[N], ch[N][2], len, root;
 
-int read() 
+int read()
 {
     static int res;
     static char op;
-    do op = getchar();
+    do
+        op = getchar();
     while (op > '9' || op < '0');
     {
         for (res = 0; op >= '0' && op <= '9'; op = getchar())
@@ -22,16 +23,16 @@ int read()
     return res;
 }
 
-bool relation(int x) 
+bool relation(int x)
 {
     return ch[fa[x]][1] == x;
 }
 
-void update(int x) 
+void update(int x)
 {
     siz[x] = siz[ch[x][0]] + siz[ch[x][1]] + 1;
     int p = a[val[x]], ch1 = a[maxn[ch[x][0]]], ch2 = a[maxn[ch[x][1]]];
-    if (p > ch1 && p > ch2) 
+    if (p > ch1 && p > ch2)
     {
         maxn[x] = val[x];
     }
@@ -39,10 +40,11 @@ void update(int x)
     {
         maxn[x] = maxn[ch[x][0]];
     }
-    else maxn[x] = maxn[ch[x][1]];
+    else
+        maxn[x] = maxn[ch[x][1]];
 }
 
-void rotate(int x) 
+void rotate(int x)
 {
     int f = fa[x], ff = fa[f], k = relation(x), y = ch[x][!k];
     fa[f] = x;
@@ -55,13 +57,13 @@ void rotate(int x)
     update(x);
 }
 
-void _splay(int x, int p) 
+void _splay(int x, int p)
 {
     for (int f; fa[x] != p; rotate(x))
     {
         if (fa[f = fa[x]] != p)
         {
-            rotate(relation(x)^relation(f) ? x : f);
+            rotate(relation(x) ^ relation(f) ? x : f);
         }
     }
 
@@ -71,24 +73,25 @@ void _splay(int x, int p)
     }
 }
 
-int _find(int rank) 
+int _find(int rank)
 {
     int now = root;
-    while (siz[ch[now][0]] + 1 != rank) 
+    while (siz[ch[now][0]] + 1 != rank)
     {
         if (siz[ch[now][0]] >= rank)
         {
             now = ch[now][0];
         }
-        else rank -= siz[ch[now][0]] + 1, now = ch[now][1];
+        else
+            rank -= siz[ch[now][0]] + 1, now = ch[now][1];
     }
 
     return now;
 }
 
-void ins(int& x, int f, int v) 
+void ins(int &x, int f, int v)
 {
-    if (!x) 
+    if (!x)
     {
         x = ++len;
         fa[x] = f;
@@ -101,11 +104,12 @@ void ins(int& x, int f, int v)
     {
         ins(ch[x][0], x, v);
     }
-    else ins(ch[x][1], x, v);
+    else
+        ins(ch[x][1], x, v);
     update(x);
 }
 
-void print(int x) 
+void print(int x)
 {
     if (ch[x][0])
     {
@@ -120,7 +124,7 @@ void print(int x)
     }
 }
 
-signed main(int argc, char** argv) 
+signed main(int argc, char **argv)
 {
     n = read();
     for (int i = 1; i <= n; ++i)
@@ -128,14 +132,15 @@ signed main(int argc, char** argv)
         a[i] = read(), c[i] = read();
     }
 
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
     {
-        if (i - c[i] > 1) 
+        if (i - c[i] > 1)
         {
             _splay(_find(i - c[i] - 1), 0);
             ins(ch[root][1], root, i);
-        } 
-        else ins(root, 0, i);
+        }
+        else
+            ins(root, 0, i);
         _splay(len, 0);
     }
 
