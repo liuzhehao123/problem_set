@@ -12,7 +12,9 @@ int read()
     static int res;
     static char op;
     do
+    {
         op = getchar();
+    } 
     while (op > '9' || op < '0');
     {
         for (res = 0; op >= '0' && op <= '9'; op = getchar())
@@ -40,7 +42,8 @@ void update(int x)
     {
         maxn[x] = maxn[ch[x][0]];
     }
-    else maxn[x] = maxn[ch[x][1]];
+    else
+        maxn[x] = maxn[ch[x][1]];
 }
 
 void rotate(int x)
@@ -81,7 +84,8 @@ int _find(int rank)
         {
             now = ch[now][0];
         }
-        else rank -= siz[ch[now][0]] + 1, now = ch[now][1];
+        else
+            rank -= siz[ch[now][0]] + 1, now = ch[now][1];
     }
 
     return now;
@@ -102,7 +106,8 @@ void ins(int &x, int f, int v)
     {
         ins(ch[x][0], x, v);
     }
-    else ins(ch[x][1], x, v);
+    else
+        ins(ch[x][1], x, v);
     update(x);
 }
 
@@ -136,7 +141,8 @@ signed main(int argc, char **argv)
             _splay(_find(i - c[i] - 1), 0);
             ins(ch[root][1], root, i);
         }
-        else ins(root, 0, i);
+        else
+            ins(root, 0, i);
         _splay(len, 0);
     }
 
