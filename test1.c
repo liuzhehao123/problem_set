@@ -1,3 +1,4 @@
+//CCF真题
 #include <stdio.h>
 #include <stdlib.h>
 
