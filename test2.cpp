@@ -135,7 +135,7 @@ int main()
             rt = t.merge(t.merge(x, y), t.merge(t.newnode(a[i]), z));
         }
     }
-    t.print(rt);
-    
+    t.print(rt); //打印最终序列
+
     return 0;
 }
