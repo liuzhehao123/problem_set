@@ -1,4 +1,4 @@
-// https://www.acwing.com/problem/content/750/
+// https://www.acwing.com/problem/content/748/
 
 #include <iostream>
 
@@ -8,27 +8,26 @@ int main()
 {
     char letter;
     cin >> letter;
-
+    
     double a[12][12];
     int count = 0;
     double sum = 0;
+    
     for (int i = 0; i < 12; ++i)
     {
         for (int j = 0; j < 12; ++j)
         {
             cin >> a[i][j];
-            if (i + j >= 12)
+            if (i > j) 
             {
                 sum += a[i][j];
                 count++;
             }
         }
     }
-
-    if (letter == 'S')
-        printf("%.1lf\n", sum);
-    else
-        printf("%.1lf\n", sum / count);
-
+    
+    if (letter == 'S') printf("%.1lf\n", sum);
+    else printf("%.1lf\n", sum / count);
+    
     return 0;
 }
