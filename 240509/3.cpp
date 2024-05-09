@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
     char c;
-
     int num_digits = 0;
     int num_letter = 0;
 
