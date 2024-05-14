@@ -16,7 +16,6 @@ int main()
             {
                 int m = len / n;
                 string s = str.substr(0, m);
-                
                 string str1;
                 for (int i = 0; i < n; ++i)
                 {
