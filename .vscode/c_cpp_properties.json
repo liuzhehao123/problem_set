@@ -2,10 +2,12 @@
     "configurations": [
         {
             "name": "Win32",
-            "includePath": [
+            "includePath": 
+            [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
+            "defines": 
+            [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
@@ -18,10 +20,12 @@
         },
         {
             "name": "C++",
-            "includePath": [
+            "includePath": 
+            [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
+            "defines": 
+            [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
