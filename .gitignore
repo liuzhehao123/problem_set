@@ -13,7 +13,7 @@ bin-release/
 *.ipa
 *.apk
 
-#过滤掉不想要文件和文件夹
+#过滤掉不要的文件和文件夹
 *.exe
 *.sln
 *.vcxproj
