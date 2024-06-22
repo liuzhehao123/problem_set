@@ -1,4 +1,50 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
+using ll = long long;
+
+void solve()
+{
+    int n;
+    std::cin >> n;
+    string s;
+    std::cin >> s;
+    
+    for (int i = 1; i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            int satisfy = 2;
+            for (int j = 0; j < i; j++)
+            {
+                for (int k = j + i; k < n; k += i)
+                {
+                    if (s[k] != s[j]) satisfy--;
+                }
+            }
+
+            if (satisfy > 0)
+            {
+                std::cout << i << '\n';
+                return;
+            }
+
+            satisfy = 2;
+            for (int j = n - i; j < n; j++)
+            {
+                for (int k = j - i; k >= 0; k -= i)
+                {
+                    if (s[k] != s[j]) satisfy--;
+                }
+            }
+
+            if (satisfy > 0)
+            {
+                std::cout << i << '\n';
+                return;
+            }
+        }
+    }
+}
 
 int main()
 {
@@ -6,38 +52,10 @@ int main()
     std::cin.tie(0);
     std::cout.tie(0);
 
-    int k;
-    std::cin >> k;
+    int t;
+    std::cin >> t;
 
-    int coin = 0, cnt = 1;
-    for (int i = 1; i <= k; ++i)
-    {
-        k -= i;
-        coin = coin + cnt * cnt;
-        cnt++;
-    }
+    while (t--) solve();
 
-    std::cout << coin + k * cnt << \'n';
-    
     return 0;
 }
-
-/* #include <iostream>
-
-int main()
-{
-    int k;
-    std::cin >> k;
-
-    int coin = 0, cnt = 1; //coin是金币，cnt是比原来每天多获得的金币数
-    for (int i = 1; i <= k; ++i)
-    {
-        k -= i;
-        coin = coin + cnt * cnt;
-        cnt++;
-    }
-
-    std::cout << coin + k * cnt << '\n';
-
-    return 0;
-} */
