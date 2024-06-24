@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
-typedef long long ll;
-//using long long = ll;
+//typedef long long ll;
+using long long = ll;
 
 void solve()
 {
