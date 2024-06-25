@@ -4,7 +4,14 @@ typedef long long ll;
 // using long long = ll;
 
 void solve() {
-    
+    std::string s, str = "codeforces";
+    std::cin >> s;
+
+    int cnt = 0;
+    for (int i= 0; s[i]; ++i) {
+        if (s[i] != str[i]) cnt++;
+    }
+    std::cout << cnt << '\n';
 }
 
 int main()
