@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 
 typedef long long ll;
+// using long long = ll;
 
 void solve() {
     int n;
@@ -22,8 +23,7 @@ void solve() {
 
 int main() {
     std::ios::sync_with_stdio(false);
-    std::cin.tie(0);
-    std::cout.tie(0);
+    std::cin.tie(nullptr);
 
     int t;
     std::cin >> t;
