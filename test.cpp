@@ -4,11 +4,10 @@ typedef long long ll;
 // using long long = ll;
 
 void solve() {
-    
+
 }
 
-int main()
-{
+int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
