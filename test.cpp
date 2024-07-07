@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
-typedef long long ll;
-//using ll = long long;
+using ll = long long;
 
 void solve() {
 
@@ -12,7 +11,7 @@ int main() {
     std::cin.tie(nullptr);
 
     int t;
-    std:cin >> t;
+    std::cin >> t;
     while (t--) {
         solve();
     }
