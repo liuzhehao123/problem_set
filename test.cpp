@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+using namespace std;
+
 using ll = long long;
 
 void solve() {
@@ -7,11 +9,11 @@ void solve() {
 }
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int t;
-    std::Cin >> t;
+    cin >> t;
     while (t--) {
         solve();
     }
