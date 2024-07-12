@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
 
-using ll = long long;
+#define ll long long
+//using ll = long long;
 
 void solve() {
-    
+    int a, b;
+    std::cin >> a >> b;
+    std::cout << a + b << '\n';
 }
 
 int main() {
