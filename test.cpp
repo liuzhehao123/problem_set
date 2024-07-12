@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
 
-#define ll long long
-//using ll = long long;
+using ll = long long;
 
 void solve() {
-    int a, b;
+    int a ,b;
     std::cin >> a >> b;
-    std::cout << a + b << '\n';
+    std::cout << a * b << '\n';
 }
 
 int main() {
@@ -14,10 +13,9 @@ int main() {
     std::cin.tie(nullptr);
 
     int t;
-    std::cin >> t;
     while (t--) {
         solve();
     }
-
+    
     return 0;
 }
