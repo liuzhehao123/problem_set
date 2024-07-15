@@ -3,7 +3,7 @@
 using ll = long long;
 
 void solve() {
-    
+
 }
 
 int main() {
@@ -11,6 +11,8 @@ int main() {
     std::cin.tie(nullptr);
 
     int t;
+    std::cin >> t;
+
     while (t--) {
         solve();
     }
