@@ -3,7 +3,9 @@
 using ll = long long;
 
 void solve() {
-    
+    int a, b;
+    std::cin >> a >> b;
+    std::cout << a + b << '\n';
 }
 
 int main() {
