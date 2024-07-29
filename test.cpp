@@ -2,8 +2,8 @@
 
 using ll = long long;
 
-void solve() {
-
+voiud solve() {
+    
 }
 
 int main() {
