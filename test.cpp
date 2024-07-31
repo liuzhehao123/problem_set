@@ -2,19 +2,13 @@
 
 using ll = long long;
 
-voiud solve() {
-    
-}
-
 int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
-    int t;
-    std::cin >> t;
-    while (t--) {
-        solve();
-    }
+    char s[100];
+    scanf("%s", s);
+    printf("%s", s);
 
     return 0;
 }
